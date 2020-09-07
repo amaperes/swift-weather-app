@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E356C8C7250689FF0096B7A5 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356C8C6250689FF0096B7A5 /* WeatherManager.swift */; };
 		E384463924FF9CEF006C4997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384463824FF9CEF006C4997 /* AppDelegate.swift */; };
 		E384463B24FF9CEF006C4997 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384463A24FF9CEF006C4997 /* SceneDelegate.swift */; };
 		E384463D24FF9CEF006C4997 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384463C24FF9CEF006C4997 /* WeatherViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E356C8C6250689FF0096B7A5 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		E384463524FF9CEF006C4997 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E384463824FF9CEF006C4997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E384463A24FF9CEF006C4997 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		E356C8C3250681960096B7A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E356C8C6250689FF0096B7A5 /* WeatherManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				E384463D24FF9CEF006C4997 /* WeatherViewController.swift in Sources */,
 				E384463924FF9CEF006C4997 /* AppDelegate.swift in Sources */,
+				E356C8C7250689FF0096B7A5 /* WeatherManager.swift in Sources */,
 				E384463B24FF9CEF006C4997 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
