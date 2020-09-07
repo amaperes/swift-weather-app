@@ -10,7 +10,7 @@ import Foundation
 
 struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=29ab07ae106a6961c71c53ea4064808e&units=metric"
-    
+        
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(urlString: urlString)
@@ -25,26 +25,30 @@ struct WeatherManager {
                     return
                 }
                 if let safeData = data {
-                    self.parseJSON(weatherData: safeData)
+                    if let weather = self.parseJSON(weatherData: safeData) {
+                        print(weather.cityName)
+                    }
                 }
             }
             task.resume()
         }
     }
     
-    func parseJSON(weatherData: Data) {
+    func parseJSON(weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
-            print(decodedData.name)
-            print(decodedData.main.temp)
-            print(decodedData.weather[0].id)
+            let id = decodedData.weather[0].id
+            let temp = decodedData.main.temp
+            let name = decodedData.name
+            
+            let weather = WeatherModel(conditionID: id, cityName: name, temperature: temp)
+            return weather
+
         } catch {
             print(error)
+            return nil
         }
     }
-        
-    
-
-    
+       
 }
